@@ -153,3 +153,55 @@ footer {
   margin-bottom: 15px;
 
 }
+
+/* Sales Data Page */
+
+table, th, td {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+form {
+  border: solid thin black;
+  padding: 25px;
+  border-radius: 15px;
+}
+
+legend {
+  padding: 8px;
+  font-size: 24px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing:border-box;
+  border-radius: 10px;
+  border: solid thin black;
+}
+
+input[type=number] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: solid thin black;
+}
+
+button {
+  background-color: #04AA6D;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 25px;
+}

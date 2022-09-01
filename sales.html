@@ -1,16 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
 
-  <title>Salmon Cookies Sales</title>
+<head>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Pat's Salmon Cookies</title>
 </head>
+
 <body>
 
-  <section>
+  <header>
+    <div class="header-wrapper">
+      <div class="logo">
+        <img src="https://raw.githubusercontent.com/codefellows/seattle-201d89/main/class-08/lab-b/assets/chinook.jpg"
+          height="70px" width="200px">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</li>
+          <li><a href="sales.html">Sales</a></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+
+
     <table id="print"></table>
-  </section>
+
+
+    </section>
+
+
+    <section class="mid">
+
+  
+        <form id="cookie-form">
+          <fieldset>
+            <legend>Add Location</legend>
+              
+              <label class="location">Location Name:</label>
+              <input type="text" name="location" required="required">
+              
+              <label class="number">Minimum Expected Customers per Hour:</label>
+              <input type="number" name="minCustomersPerHour" required="required">
+              
+              <label class="number">Maximum Expected Customers per Hour:</label>
+              <input type="number" name="maxCustomersPerHour" required="required">
+              
+              <label class="number">Estimated Average Cookies per Customer:</label>
+              <input type="number" name="avgCookiesPerCustomer" step="any" required="required">
+              
+              <button type="submit" onclick="alert('New Location Added')">Submit Location</button>
+          </fieldset>
+        </form>
+
   
 
-<script src="app.js"></script>
+    </section>
+
+
+    <section class="bot">
+
+
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-wrapper">
+
+      <div>
+        <img src="https://raw.githubusercontent.com/codefellows/seattle-201d89/main/class-08/lab-b/assets/salmon.png"
+          height="70px" width="200px">
+      </div>
+
+      <div>
+        Location:<br>
+        123 W. Main St.<br>
+        Phoenix, AZ 85003<br>
+        Phone:<br>
+        (480) 555-5555<br>
+
+      </div>
+
+      <div>
+        Hours:<br>
+        Monday - Friday<br>
+        9am - 5pm<br>
+        Saturday - Sunday<br>
+        11am - 7pm<br>
+      </div>
+    </div>
+  </footer>
+  <script src="app.js"></script>
 </body>
+
 </html>
