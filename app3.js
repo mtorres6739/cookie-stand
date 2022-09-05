@@ -65,6 +65,19 @@ Store.prototype.display = function () {
 }
 
 
+// function genFooter(){
+//   let total = 0;
+//   for (let i = 0; i < hours.length; i++){
+//     let salesAtHour = 0;
+//     for (let j = 0; j < collection.length; j++){
+
+//       let currStore = collection[j];
+//       console.log(currStore.totalCustomers[i]);
+//     }
+//   }
+// }
+
+
 function genFooter() {
   allTotal = 0;
   totalsByHour = [];
@@ -74,6 +87,7 @@ function genFooter() {
       let currStore = collection[stores];
       let currSale = currStore.totalCustomers[parseInt(hour)];
       salesAtHour += currSale;
+      // total += currSale;
       console.log(currStore.totalCustomers);
       console.log(hours);
 
@@ -82,6 +96,7 @@ function genFooter() {
   }
   for (let i = 0; i < collection.length; i++) {
     allTotal += collection[i].grandTotal;
+    // total = total + the collection i + grandTotal
   }
 }
 
@@ -107,6 +122,10 @@ cookieForm.addEventListener('submit', function (event) {
   );
 
   cookieForm.reset();
+  // event.target.location.value = "";
+  // event.target.minCustomersPerHour.value = "";
+  // event.target.maxCustomersPerHour.value = "";
+  // event.target.avgCookiesPerCustomer.value = "";
 
   table.innerHTML = '';
   foot.innerHTML = '';
@@ -115,6 +134,16 @@ cookieForm.addEventListener('submit', function (event) {
   genFooter();
   displayFoot();
 
+
+
+  // let newLocation = event.target.location.value;
+  // let minCustomers = parseInt(event.target.minCustomers.value);
+  // let maxCustomers = parseInt(event.target.maxCustomers.value);
+  // let avgCookie = parseInt(event.target.avgCookie.value);
+
+  // new Store(newLocation, minCustomers, maxCustomers, avgCookie);
+
+  // console.log("form submitted");
 });
 
 function collect() {
@@ -189,57 +218,46 @@ function displayFoot() {
 
 
 
+// // Display Footer
 
+// function displayFooter() {
+//     let footer = document.getElementById('print');
 
+//     // define row element
+//     let row = document.createElement('tr');
+//     let head = document.createElement('th');
+//     head.textContent = 'Total Sales';
+//     row.appendChild(head);
+//     footer.appendChild(row);
 
+//     // Outer Loop
+//     for (let hour in hours) {
+//         let salesAtHour = 0;
+//         let cell = document.createElement('td');
 
-// CHART
+//         // Inner Loop
+//         for (let collect in collection) {
+//             let currentCollect = collection[collect];
+//             let numCookies = currentCollect.grandTotal[hour];
+//             salesAtHour += numCookies;
+//           }
+//           cell.textContent = salesAtHour;
+//           row.appendChild(cell);
+//           console.log(`sales at ${hours[hour]} : ${totalsByHour}`);
 
-function capitalize(str) {
-  let returnValue = str.split('');
-  returnValue[0] = returnValue[0].toUpperCase();
-  returnValue = returnValue.join('');
-  return returnValue;
-}
+//         }
+//         // now add grandTotal
+//         let cell = document.createElement('td');
+//         let totals = 0;
 
+//         for (let collect of collection) {
+//             totals += collect.grandTotal;
+//           }
+//           cell.textContent = totals;
+//           row.appendChild(cell);
+//         }
 
-function renderChart() {
-
-  let storeNames = [];
-  let storeSales = [];
-
-  for (let i = 0; i < collection.length; i++) {
-    storeNames.push(capitalize(collection[i].location));
-    storeSales.push(collection[i].grandTotal);
-  }
-
-  const data = {
-    labels: storeNames,
-    datasets: [{
-      label: 'Sales',
-      data: storeSales,
-      backgroundColor: ['#04AA6D'],
-      borderColor: ['#04AA6D'],
-      borderWidth: 1
-    },
-    ]
-  };
-
-  const ctx = document.getElementById('myChart');
-  const myChart = new Chart(ctx, {
-    type: 'bar',
-    data: data,
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true,
-        }
-      }
-    }
-  });
-}
 display();
 collect();
 genFooter();
 displayFoot();
-renderChart();

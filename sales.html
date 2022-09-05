@@ -10,94 +10,67 @@
 <body>
 
   <header>
-    <div class="header-wrapper">
-      <div class="logo">
-        <img src="https://raw.githubusercontent.com/codefellows/seattle-201d89/main/class-08/lab-b/assets/chinook.jpg"
-          height="70px" width="200px">
-      </div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</li>
-          <li><a href="sales.html">Sales</a></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </nav>
-    </div>
+    <h1>Pat's Salmon Cookies</h1>
+    <div class="logo"><img src="./img/chinook.jpg"></div>
   </header>
-
+  <nav>
+    <h2>Navigation</h2>
+    <nav>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./sales.html">Sales</a></li>
+      </ul>
+    </nav>
+  </nav>
   <main>
-
-    <section class="hero">
-
-
-    <table id="print"></table>
-
-
-    </section>
-
-
-    <section class="mid">
-
-  
-        <form id="cookie-form">
-          <fieldset>
-            <legend>Add Location</legend>
-              
-              <label class="location">Location Name:</label>
-              <input type="text" name="location" required="required">
-              
-              <label class="number">Minimum Expected Customers per Hour:</label>
-              <input type="number" name="minCustomersPerHour" required="required">
-              
-              <label class="number">Maximum Expected Customers per Hour:</label>
-              <input type="number" name="maxCustomersPerHour" required="required">
-              
-              <label class="number">Estimated Average Cookies per Customer:</label>
-              <input type="number" name="avgCookiesPerCustomer" step="any" required="required">
-              
-              <button type="submit" onclick="alert('New Location Added')">Submit Location</button>
-          </fieldset>
-        </form>
-
-  
-
-    </section>
-
-
-    <section class="bot">
-
-
-    </section>
-
-  </main>
-
-  <footer>
-    <div class="footer-wrapper">
-
-      <div>
-        <img src="https://raw.githubusercontent.com/codefellows/seattle-201d89/main/class-08/lab-b/assets/salmon.png"
-          height="70px" width="200px">
-      </div>
-
-      <div>
-        Location:<br>
-        123 W. Main St.<br>
-        Phoenix, AZ 85003<br>
-        Phone:<br>
-        (480) 555-5555<br>
-
-      </div>
-
-      <div>
-        Hours:<br>
-        Monday - Friday<br>
-        9am - 5pm<br>
-        Saturday - Sunday<br>
-        11am - 7pm<br>
-      </div>
+    <div class="about">
+      <h2>Sales Data for Pat's Salmon Cookies</h2>
+        <table id="print"></table>
     </div>
-  </footer>
+    <div class="item">
+      <h2>Add New Location Sales Data</h2>
+      <form id="cookie-form">
+        <fieldset>
+          <legend></legend>
+      
+          <label class="location">Location Name:</label>
+          <input type="text" name="location" required="required">
+      
+          <label class="number">Minimum Expected Customers per Hour:</label>
+          <input type="number" name="minCustomersPerHour" required="required">
+      
+          <label class="number">Maximum Expected Customers per Hour:</label>
+          <input type="number" name="maxCustomersPerHour" required="required">
+      
+          <label class="number">Estimated Average Cookies per Customer:</label>
+          <input type="number" name="avgCookiesPerCustomer" step="any" required="required">
+      
+          <button type="submit" onclick="alert('New Location Added')">Submit Location</button>
+        </fieldset>
+      </form>
+     
+    </div>
+    <div class="store">
+      <h2>Original Locations Sales Chart</h2>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+          <div class="chart">
+            <canvas id="myChart" height="230" width="auto"></canvas>
+          </div>
+
+    </div>
+  </main>
+  <aside>
+    <h3>Locations</h3>
+    <div class="location1">Seattle<br>2407 E Union St. Seattle, WA 98122<br>206-555-5551</div>
+    <div class="location2">Tokoyo<br>1 Chome-21-15 Jingumae, Shibuya City, Tokyo 150-0001, Japan<br>003-5555-5552</div>
+    <div class="location3">Dubai<br>34 14 C St - Jumeirah - Jumeirah 1 - Dubai - United Arab Emirates<br>971 55-555-5553
+    </div>
+    <div class="location4">Paris<br>144 Rue Saint-Honoré, 75001 Paris, France<br>44-55-5555-5554</div>
+    <div class="location5">Lima<br>Jirón de la Unión 272, Cercado de Lima 15001, Peru<br>011-55-55-555555</div>
+    <div class="location6">All Locations<br>Open 24 hours<br>sales@patscookies.com</div>
+  </aside>
+  <footer>Footer</footer>
+
   <script src="app.js"></script>
 </body>
 
